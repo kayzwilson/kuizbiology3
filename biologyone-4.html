@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kuizlearning/biologyone.ug.com</title>
+    <link rel="stylesheet" href="kuizapp.css">
+    <link rel="icon" type="image/x-icon" href="/images/fav3.ico">
+</head>
+<body>
+    <h1>Kuiz Biology</h1>
+    <div class="container">
+        <div class="container-contents">
+            <h3>Question 4/10</h3>
+            <div class="container-loader">
+                <div class="container-loader-fill four" id="loader1"></div>
+            </div>
+            <div class="container-score">
+                <h3>Answer!</h3>
+                <h2 id="answer"></h2>
+            </div>
+            <h2>4)Which of the following is not a characteristic of living things?</h2>
+            <div class="container-options" id="container-options1">
+                <div class="container-options-alpha"><h2>A</h2></div>
+                <h3>Movement</h3>
+            </div>
+            <div class="container-options" id="container-options2">
+                <div class="container-options-alpha"><h2>B</h2></div>
+                <h3>Digestion</h3>
+            </div>
+            <div class="container-options" id="container-options3">
+                <div class="container-options-alpha"><H2>C</H2></div>
+                <h3>Growth</h3>
+            </div>
+            <div class="container-options" id="container-options4">
+                <div class="container-options-alpha"><h2>D</h2></div>
+                <h3>Reproduction</h3>
+            </div>
+               
+               
+              
+        </div>
+    </div>
+    <script>
+      const options1 = document.getElementById("container-options1");
+      const options2 = document.getElementById("container-options2");
+      const options3 = document.getElementById("container-options3");
+      const options4 = document.getElementById("container-options4");
+      let loader1 = document.getElementById("loader1");
+      let answer = document.getElementById("answer");
+      let score = localStorage.getItem('newscore');
+      
+
+
+options1.addEventListener("click", function(){
+    setTimeout(() => {
+        window.location.href = "biologyone-5.html";
+    }, 2000);
+    answer.innerHTML = "Correct";
+    this.style.backgroundColor = "lightgreen";
+    options2.style.backgroundColor = "whitesmoke";
+    options3.style.backgroundColor = "whitesmoke";
+    options4.style.backgroundColor = "whitesmoke";
+    loader1.style.width = "64px";
+    score = parseInt(score) + 1;
+    localStorage.setItem('newscore', score);
+    
+})
+
+options2.addEventListener("click", function(){
+    setTimeout(() => {
+        window.location.href = "biologyone-5.html";
+    }, 2000);
+    answer.innerHTML = "Wrong";
+    this.style.backgroundColor = "rgba(256,0,0,0.4)";
+    options1.style.backgroundColor = "lightgreen";
+    options3.style.backgroundColor = "whitesmoke";
+    options4.style.backgroundColor = "whitesmoke";
+    loader1.style.width = "64px";
+    localStorage.setItem('newscore', score);
+})
+
+options3.addEventListener("click", function(){
+    setTimeout(() => {
+        window.location.href = "biologyone-5.html";
+    }, 2000);
+    answer.innerHTML = "Wrong";
+    this.style.backgroundColor = "rgba(256,0,0,0.4)";
+    options2.style.backgroundColor = "whitesmoke";
+    options1.style.backgroundColor = "lightgreen";
+    options4.style.backgroundColor = "whitesmoke";
+    loader1.style.width = "64px";
+    localStorage.setItem('newscore', score);
+   
+   
+   
+})
+
+options4.addEventListener("click", function(){
+    setTimeout(() => {
+        window.location.href = "biologyone-5.html";
+    }, 2000);
+    answer.innerHTML = "Wrong";
+    this.style.backgroundColor = "rgba(256,0,0,0.4)";
+    options2.style.backgroundColor = "whitesmoke";
+    options3.style.backgroundColor = "whitesmoke";
+    options1.style.backgroundColor = "lightgreen";
+    loader1.style.width = "64px";
+    localStorage.setItem('newscore', score);
+})
+
+
+    
+  
+
+    </script>
+</body>
+</html>

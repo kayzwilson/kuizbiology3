@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kuizlearning/biologyone/results.com</title>
+    <link rel="stylesheet" href="results.css">
+</head>
+<body>
+    <h1>RESULTS</h1>
+    <div class="container">
+        <div class="result score">
+            <h2>SCORE: </h2>
+            <h3><span id="gradescore"></span>/10</h3>
+        </div>
+        <div class="result comment">
+            <h2>COMMENT:&nbsp;&nbsp;</h2>
+            <p id="comment">Nice trial!! But put in more effort </p>
+        </div>
+        <div class="buttons">
+            <button><a href="biologyone-1.html">RESTART</a></button>
+            <button><a href="biologyhome.html">HOME</a></button>
+        </div>
+    </div>
+<script>
+    let score = localStorage.getItem('newscore');
+    document.getElementById("gradescore").innerHTML = score;
+    localStorage.clear();
+    
+    if (score <= 4) {
+        document.getElementById("comment").innerHTML = ' Just give up bro!!... Or get your head checked.. This aint your destiny!! If you have some piece of land better think of farming!'
+        
+    } else if (score <= 7) {
+        document.getElementById("comment").innerHTML = 'Not bad but clearly luck gave you a hand!. Me at 6years could do way better than this! We just cant all be bright!!'
+    } else{
+        document.getElementById("comment").innerHTML = 'Congs man. Clearly its just basic biology but you did it!! You aint dumb man..woow'
+    }
+</script>
+</body>
+</html>
