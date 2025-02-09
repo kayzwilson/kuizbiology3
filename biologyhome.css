@@ -6,6 +6,7 @@
 
 body{
     background-color: #7BDCB5;
+    overflow-x: hidden;
 }
 
 .container1{
