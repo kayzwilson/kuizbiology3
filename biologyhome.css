@@ -953,7 +953,7 @@ h3{
 }
 
 }
-@media (max-width: 444px){
+@media all and (max-width: 444px){
     .container1{
         width: 100%;
         height: auto;
